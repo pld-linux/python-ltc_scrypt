@@ -5,16 +5,16 @@
 %bcond_with	python3 # CPython 3.x module
 
 %define 	module	ltc_scrypt
+%define		egg_name	ltc_scrypt
+%define		pypi_name	ltc-scrypt
 Summary:	Bindings for scrypt proof of work used by Litecoin
 # Summary(pl.UTF-8):	
-# Name must match the python module/package name (as on pypi or in 'import' statement)
 Name:		python-%{module}
 Version:	1.0
 Release:	1
 License:	Unknown
 Group:		Libraries/Python
-# Source0:	https://pypi.python.org/packages/source/M/MODULE/%{module}-%{version}.tar.gz
-Source0:	https://pypi.python.org/packages/6e/5b/22f4434692439ff895a46c60a222cce995f1e52566bee0f4a64714c96f2b/ltc_scrypt-1.0.tar.gz#md5=7d019c3c98f16eb466a272e518ffb014
+Source0:	https://pypi.python.org/packages/6e/5b/22f4434692439ff895a46c60a222cce995f1e52566bee0f4a64714c96f2b/ltc_scrypt-1.0.tar.gz
 # Source0-md5:	7d019c3c98f16eb466a272e518ffb014
 URL:		https://pypi.python.org/pypi/ltc_scrypt
 BuildRequires:	rpm-pythonprov
@@ -92,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/%{module}.so
-%{py_sitedir}/%{module}-%{version}-py*.egg-info
+%{py_sitedir}/%{egg_name}-%{version}-py*.egg-info
 %endif
 
 %if %{with python3}
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/%{module}/*.py
 %attr(755,root,root) %{py3_sitedir}/%{module}/*.so
 %{py3_sitedir}/%{module}/__pycache__
-%{py3_sitedir}/%{module}-%{version}-py*.egg-info
+%{py3_sitedir}/%{egg_name}-%{version}-py*.egg-info
 %endif
 
 %if %{with doc}
