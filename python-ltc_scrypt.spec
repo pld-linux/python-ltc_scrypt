@@ -14,7 +14,7 @@ Version:	1.0
 Release:	1
 License:	Unknown
 Group:		Libraries/Python
-Source0:	https://pypi.python.org/packages/6e/5b/22f4434692439ff895a46c60a222cce995f1e52566bee0f4a64714c96f2b/ltc_scrypt-1.0.tar.gz
+Source0:	https://pypi.python.org/packages/source/l/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	7d019c3c98f16eb466a272e518ffb014
 URL:		https://pypi.python.org/pypi/ltc_scrypt
 BuildRequires:	rpm-pythonprov
